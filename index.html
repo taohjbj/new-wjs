@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!-- bootstrap模板 此属性为文档兼容模式声明，表示如果在IE浏览器下则使用最新的标准渲染当前文档 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>好久不见 微金所</title>
+    <!-- 前面引入bootstrp因为想要先加载出来就看到样式 -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- 头部区域 -->
+<header id="header">
+    <!-- 通过响应不同档位的屏幕宽度来改变是否显示或者隐藏-->
+    <!--<div class="topBar visible-lg visible-md">-->
+    <div class="topBar hidden-sm hidden-xs">
+        <!-- 使用bootstrap container类自动居中响应式宽度 -->
+        <div class="container">
+            <div class="row text-center">
+                <!-- 栅格系统共十二列改变列数和对应的份数 -->
+                <div class="col-md-2">
+                    <a href="#" class="moblie-link">
+                        <i class="icon-mobilePhone"></i>
+                        <span>手机微金所</span>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <img src="img/c_06.jpg" alt="骚一骚"/>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <i class="icon-telephone"></i>
+                    <span>4006-89-4006（服务时间：9:00-21:00）</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="#">常见问题</a>
+                    <a href="#">财富登录</a>
+                </div>
+                <div class="col-md-3">
+                    <!-- 按钮生成器 可以自己生成按钮代码 放在扩展里面就是自己想要的风格了
+                     也可以找到模板中的按钮复制到自己的样式表中单独修改-->
+                    <a href="#" class="btn btn-my-register btn-sm">免费注册</a>
+                    <!-- 模态框这里同理 data-toggle判断是什么组件；target链接-->
+                    <a href="#" class="btn btn-link btn-sm" data-toggle="modal" data-target=".modal">登录</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 导航栏本来是navbar-wjs默认样式 复制过来修修改改就成了自己样式 -->
+    <nav class="navbar navbar-wjs affix-top" data-spy="affix" data-offset-top="50" data-offset-bottom="200">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- navbar-header 里面要放logo和最小屏幕时显示的汉堡下拉 里面的data-target就链接着下面盒子包裹的ul 切换显示隐藏 -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_list"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <i class="icon-wjs"></i>
+                    <i class="icon-logo"></i>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav_list">
+                <!-- 找到模板导航条 -->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">我要投资</a></li>
+                    <li><a href="#">我要借款</a></li>
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">新手专区</a></li>
+                    <li><a href="#">最新动态</a></li>
+                    <li><a href="#">微论坛</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm">
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- /头部区域 -->
+<!-- 广告轮播 -->
+<!-- 这里我把源代码的外层盒子和section项合并了 它们的锚点名字也改变了 可以data属性设置滚动间隔等参数-->
+<section id="main_ad" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Indicators 指标 指示器 小圆点 -->
+    <ol class="carousel-indicators">
+        <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+        <li data-target="#main_ad" data-slide-to="1"></li>
+        <li data-target="#main_ad" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides 轮播的图片 用data保存屏幕不同时候的尺寸然后通过js控制怎么载入-->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" data-image-lg="img/slide_01_2000x410.jpg" data-image-xs="img/slide_01_640x340.jpg">
+            <div class="carousel-caption">
+                <h3>这里可以设置一些内容</h3>
+
+                <p>这里可以设置一些内容</p>
+            </div>
+        </div>
+        <div class="item" data-image-lg="img/slide_02_2000x410.jpg" data-image-xs="img/slide_02_640x340.jpg">
+        </div>
+        <div class="item" data-image-lg="img/slide_03_2000x410.jpg" data-image-xs="img/slide_03_640x340.jpg">
+        </div>
+    </div>
+
+    <!-- Controls 左右控制按钮 -->
+    <a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+<!-- /广告轮播 -->
+<!-- 产品介绍 -->
+<section id="features" class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-a"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-b"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-c"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-d"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-e"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="icon-features-f"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+
+                            <p>银联支付全称保证支付安全</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- /产品介绍 -->
+<!-- 立即预约 -->
+<section id="booking" class="hidden-sm hidden-xs">
+    <div class="container">
+        <p class="pull-left hidden-xs">
+            <i class="icon-booking-clock"></i>
+            现在有<span>458</span>人在排队，累计预约交易成功<span>7409</span>次。 什么是预约投标？ <a href="#">立即预约</a>
+        </p>
+
+        <p class="pull-right visible-md visible-lg"><a href="#"><i class="icon-booking-movie"></i>
+            微金所企业宣传片</a></p>
+    </div>
+
+</section>
+<!-- /立即预约 -->
+<!-- 特别推荐 -->
+<section id="products">
+    <div class="container">
+        <!-- Nav tabs 这里使用另一种方式;不复制bootstrap源码；只用自己想要的样式它的样式的权重层叠掉模板的源码 栅格系统很好用 -->
+        <div class="touch-scroll">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#products_01" aria-controls="products_01" role="tab" data-toggle="tab">特别推荐</a></li>
+                <li role="presentation"><a href="#products_02" aria-controls="products_02" role="tab" data-toggle="tab">微投资</a>
+                </li>
+                <li role="presentation"><a href="#products_03" aria-controls="products_03" role="tab" data-toggle="tab">微小宝</a>
+                </li>
+                <li role="presentation"><a href="#products_04" aria-controls="products_04" role="tab" data-toggle="tab">微小费</a>
+                </li>
+                <li role="presentation"><a href="#products_05" aria-controls="products_05" role="tab" data-toggle="tab">微增利</a>
+                </li>
+                <li role="presentation"><a href="#products_06" aria-controls="products_06" role="tab" data-toggle="tab">微金宝</a>
+                </li>
+                <li role="presentation"><a href="#products_07" aria-controls="products_07" role="tab" data-toggle="tab">微转让</a>
+                </li>
+                <li class="hidden-xs hidden-sm pull-right"><a href="#">更多</a></li>
+            </ul>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- 每个tab选项卡都可以加上fade增加淡入淡出效果;第一个要加上in-->
+            <div role="tabpanel" class="tab-pane active fade in" id="products_01">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_02">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_03">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_04">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_05">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_06">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs active">
+                            <div class="panel-heading">
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-wjs">
+                            <div class="panel-heading">
+                                <!-- 使用tooltips插件必须初始化js-->
+                                <p class="tooltips">
+                                    <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                    <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                                </p>
+                                <p>
+                                    <strong>8</strong>
+                                    <sub>%</sub><br>
+                                    <span>年利率</span>
+                                </p>
+                            </div>
+                            <div class="panel-body">
+                                <h5>新手体验标0650期</h5>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <dt>起始金额(元)</dt>
+                                        <dd>
+                                            0.01
+                                            <sub>万</sub>
+                                        </dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="products_07">
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs active">
+                        <div class="panel-heading">
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs">
+                        <div class="panel-heading">
+                            <!-- 使用tooltips插件必须初始化js-->
+                            <p class="tooltips">
+                                <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                            </p>
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs">
+                        <div class="panel-heading">
+                            <!-- 使用tooltips插件必须初始化js-->
+                            <p class="tooltips">
+                                <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                            </p>
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs">
+                        <div class="panel-heading">
+                            <!-- 使用tooltips插件必须初始化js-->
+                            <p class="tooltips">
+                                <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                            </p>
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs">
+                        <div class="panel-heading">
+                            <!-- 使用tooltips插件必须初始化js-->
+                            <p class="tooltips">
+                                <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                            </p>
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="panel panel-wjs">
+                        <div class="panel-heading">
+                            <!-- 使用tooltips插件必须初始化js-->
+                            <p class="tooltips">
+                                <span class='tooltips-one' data-toggle="tooltip" data-placement="top" title="北京市">京</span>
+                                <span class='tooltips-two' data-toggle="tooltip" data-placement="top" title="实体店">实</span>
+                            </p>
+                            <p>
+                                <strong>8</strong>
+                                <sub>%</sub><br>
+                                <span>年利率</span>
+                            </p>
+                        </div>
+                        <div class="panel-body">
+                            <h5>新手体验标0650期</h5>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                                <div class="col-xs-6">
+                                    <dt>起始金额(元)</dt>
+                                    <dd>
+                                        0.01
+                                        <sub>万</sub>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /特别推荐 -->
+<!-- 新闻导航 -->
+<section id='news'>
+    <div class="container">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="news-title">
+                全部新闻
+            </div>
+        </div>
+        <div class="col-md-1">
+            <ul class="nav nav-pills nav-stacked">
+                <li data-title="全部新闻" role="presentation" class="active">
+                    <a href="#new-01" aria-controls="home" role="tab" data-toggle="tab">
+                        <i class="icon-news-one"></i>
+                    </a>
+                </li>
+                <li data-title="媒体报道" role="presentation">
+                    <a href="#new-02" aria-controls="home" role="tab" data-toggle="tab">
+                        <i class="icon-news-two"></i>
+                    </a>
+                </li>
+                <li data-title="行业资讯" role="presentation">
+                    <a href="#new-03" aria-controls="home" role="tab" data-toggle="tab">
+                        <i class="icon-news-there"></i>
+                    </a>
+                </li>
+                <li data-title="微金所头条" role="presentation">
+                    <a href="#new-04" aria-controls="home" role="tab" data-toggle="tab">
+                        <i class="icon-news-four"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-7">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active fade in" id="new-01">
+                    <ul>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="new-02">
+                    <ul>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="new-03">
+                    <ul>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="new-04">
+                    <ul>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                        <li>【微还款】2015年12月10日共23个项目按时完成全部还款</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /新闻导航 -->
+<!-- 合作伙伴 -->
+<section id="friends" class="hidden-sm hidden-xs">
+    <div class="container">
+        <h3 class="text-center">合作伙伴</h3>
+        <ul class="text-center">
+            <li><a href="#" class="icon-uniE930"></a></li>
+            <li><a href="#" class="icon-uniE92F"></a></li>
+            <li><a href="#" class="icon-uniE92E"></a></li>
+            <li><a href="#" class="icon-uniE92A"></a></li>
+            <li><a href="#" class="icon-uniE929"></a></li>
+            <li><a href="#" class="icon-uniE931"></a></li>
+            <li><a href="#" class="icon-uniE92C"></a></li>
+            <li><a href="#" class="icon-uniE92B"></a></li>
+            <li><a href="#" class="icon-uniE92D"></a></li>
+        </ul>
+    </div>
+</section>
+<!-- /合作伙伴 -->
+<!-- 脚注部分 -->
+<footer></footer>
+<!-- /脚注补分 -->
+<!-- 登录框 -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">欢迎登录</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="请输入邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

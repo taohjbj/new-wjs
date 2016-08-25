@@ -1,0 +1,778 @@
+/**
+ * 1. 样式都通过ID去限定
+ * 2. 尽可能多使用直接子代选择器
+ */
+/**
+ * bootstrap扩展
+ */
+/* 可以根据自己需要修改为自己的样式 可以找到button bootstrap XXX网站生成按钮*/
+
+.btn-my-register {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-my-register:hover,
+.btn-my-register:focus,
+.btn-my-register:active,
+.btn-my-register.active,
+.open .dropdown-toggle.btn-my-register {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-my-register:active,
+.btn-my-register.active,
+.open .dropdown-toggle.btn-my-register {
+    background-image: none;
+}
+
+.btn-my-register.disabled,
+.btn-my-register[disabled],
+fieldset[disabled] .btn-my-register,
+.btn-my-register.disabled:hover,
+.btn-my-register[disabled]:hover,
+fieldset[disabled] .btn-my-register:hover,
+.btn-my-register.disabled:focus,
+.btn-my-register[disabled]:focus,
+fieldset[disabled] .btn-my-register:focus,
+.btn-my-register.disabled:active,
+.btn-my-register[disabled]:active,
+fieldset[disabled] .btn-my-register:active,
+.btn-my-register.disabled.active,
+.btn-my-register[disabled].active,
+fieldset[disabled] .btn-my-register.active {
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-my-register .badge {
+    color: #E92322;
+    background-color: #ffffff;
+}
+
+.navbar-reginster {
+    background-color: #fff;
+    border-color: #f5f5f5;
+}
+
+.navbar-reginster .navbar-brand {
+    color: #777;
+    height: 80px;
+}
+
+.navbar-reginster .navbar-brand:hover,
+.navbar-reginster .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-reginster .navbar-text {
+    color: #777;
+}
+
+.navbar-reginster .navbar-nav > li > a {
+    color: #777;
+    line-height: 48px;
+    font-size: 14px;
+}
+
+.navbar-reginster .navbar-nav > li > a:hover,
+.navbar-reginster .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #e92322;
+}
+
+.navbar-reginster .navbar-nav > .active > a,
+.navbar-reginster .navbar-nav > .active > a:hover,
+.navbar-reginster .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-reginster .navbar-nav > .disabled > a,
+.navbar-reginster .navbar-nav > .disabled > a:hover,
+.navbar-reginster .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-reginster .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.navbar-reginster .navbar-toggle:hover,
+.navbar-reginster .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-reginster .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-reginster .navbar-collapse,
+.navbar-reginster .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-reginster .navbar-nav > .open > a,
+.navbar-reginster .navbar-nav > .open > a:hover,
+.navbar-reginster .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+.navbar-wjs {
+    background-color: #fff;
+    border-color: #f5f5f5;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-wjs .navbar-brand {
+    color: #777;
+}
+
+.navbar-wjs .navbar-brand:hover,
+.navbar-wjs .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-wjs .navbar-text {
+    color: #777;
+}
+
+.navbar-wjs .navbar-nav > li > a {
+    color: #777;
+    line-height: 50px;
+}
+
+.navbar-wjs .navbar-nav > li > a:hover,
+.navbar-wjs .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-wjs .navbar-nav > .active > a,
+.navbar-wjs .navbar-nav > .active > a:hover,
+.navbar-wjs .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #e92322;
+}
+
+.navbar-wjs .navbar-nav > .disabled > a,
+.navbar-wjs .navbar-nav > .disabled > a:hover,
+.navbar-wjs .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-wjs .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.navbar-wjs .navbar-toggle:hover,
+.navbar-wjs .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-wjs .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-wjs .navbar-collapse,
+.navbar-wjs .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-wjs .navbar-nav > .open > a,
+.navbar-wjs .navbar-nav > .open > a:hover,
+.navbar-wjs .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+/**
+ * 找到bootstrap里面的默认navbar-wjs然后设置自己的类名；修改自己想要的在它的基础上修改自己想要的样式
+ */
+@media (max-width: 767px) {
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: transparent;
+    }
+
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-wjs .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-wjs .navbar-link {
+    color: #777;
+}
+
+.navbar-wjs .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-wjs .btn-link {
+    color: #777;
+}
+
+.navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link:focus {
+    color: #333;
+}
+
+.navbar-wjs .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-wjs .btn-link:hover,
+.navbar-wjs .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-wjs .btn-link:focus {
+    color: #ccc;
+}
+
+.panel-wjs {
+    color: #fff;
+    box-shadow: 1px 1px 5px #c0c0c0;
+}
+.panel-wjs > .panel-heading {
+     color: #333;
+     float: right;
+     width: 120px;
+     height: 150px;
+     border-left: 1px dashed #c0c0c0;
+     position: relative;
+     padding-top: 45px;
+     padding-bottom: 35px;
+     text-align: center;
+ }
+/* 产品介绍里面的tab标签页内容 使用了panel组件 */
+.panel-wjs > .panel-heading > .tooltips {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+    left: 0;
+}
+.panel-wjs > .panel-heading > .tooltips span {
+    border-width: 1px;
+    border-style: solid;
+    padding: 2px;
+    cursor: pointer;
+}
+.panel-wjs > .panel-heading > .tooltips span.tooltips-one {
+    border-color: #E92322;
+    color: #E92322;
+}
+.panel-wjs > .panel-heading > .tooltips span.tooltips-two {
+    border-color: #399;
+    color: #399;
+}
+.panel-wjs > .panel-body {
+    color: #333;
+    /* float: left; */
+    margin-right: 120px;
+    height: 150px;
+}
+/* 小圆点 */
+.panel-wjs > .panel-heading::before,
+.panel-wjs > .panel-heading::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+}
+.panel-wjs > .panel-heading::before {
+    top: -7px;
+    left: -7px;
+}
+.panel-wjs > .panel-heading::after {
+    bottom: -7px;
+    left: -7px;
+    box-shadow: inset 0 2px #c0c0c0;
+}
+.panel-wjs.active {
+    background: #e9232c;
+}
+.panel-wjs.active::before {
+    content: "\e915";
+    font-family: wjs;
+    font-size: 38px;
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    color: #fff;
+}
+
+.panel-wjs > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+.panel-wjs > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+}
+.panel-wjs > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+}
+
+/* 设置字体样式 */
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+/* 引入自己的字体文件 */
+@font-face {
+    font-family: 'wjs';
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff');
+}
+
+/* 自己定义的字体图标都用自己的字体 */
+[class^='icon-'],
+[class*=' icon-'] {
+    font-family: wjs;
+    font-style: normal;
+}
+
+.icon-mobilePhone::before {
+    content: '\e908';
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: '\e909';
+    font-size: 15px;
+}
+
+.icon-logo::before {
+    content: "\e93e";
+}
+
+.icon-wjs::before {
+    content: "\e920";
+}
+
+/* */
+.icon-features-a::before {
+    content: '\e907';
+}
+
+.icon-features-b::before {
+    content: '\e903';
+}
+
+.icon-features-c::before {
+    content: '\e901';
+}
+
+.icon-features-d::before {
+    content: '\e900';
+}
+
+.icon-features-e::before {
+    content: '\e904';
+}
+
+.icon-features-f::before {
+    content: '\e902';
+}
+.icon-booking-clock::before {
+    content: '\e906';
+}
+.icon-booking-movie::before {
+    content: '\e905';
+}
+.icon-news-one:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+.icon-news-two:before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+.icon-news-there:before {
+    content: "\e901";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+.icon-news-four:before {
+    content: "\e901";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-uniE930:hover {
+    color: #df3232;
+}
+
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
+}
+
+
+
+
+
+body {
+    height: 2000px;
+}
+/* 头部区域----------------------------------------------------------------*/
+
+#header > .topBar {
+    height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+    line-height: 40px;
+}
+
+/* 如果是亲儿子选择器 那么要一级一级的访问 */
+#header > .topBar .container > .row div {
+    height: 40px;
+    color: #888;
+    font-size: 12px;
+}
+
+#header > .topBar .container > .row div + div {
+    border-left: 1px solid #cccccc;
+}
+
+#header a {
+    color: #888;
+    position: relative;
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+#header .moblie-link img {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -60px;
+    display: none;
+}
+
+#header .moblie-link:hover img {
+    display: block;
+}
+
+#header .btn-my-register {
+    color: #ffffff;
+}
+
+#header .icon-wjs {
+    font-size: 50px;
+    vertical-align: middle;
+    color: #E92322;
+    font-size: 50px;
+}
+
+#header .icon-logo {
+    font-size: 32px;
+    vertical-align: middle;
+    color: #333;
+    line-height: 50px;
+}
+
+/**
+ * 广告轮播­----------------------------------------------------------------
+ */
+#main_ad {}
+/* carousel => 圆盘传送带  采用背景图的方式就可以让一张长条图在框里面居中显示*/
+#main_ad > .carousel-inner > .item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 媒体查询 这里min-width的意思就是最小值为768；也就是说这个条件下的都是大于768的;
+因为变成小屏幕图片要变为img方式插入才能有缩放效果；但是不能设置高度；设置高度整体item还是不变就会有问题˜*/
+@media (min-width: 768px) {
+    #main_ad > .carousel-inner > .item {
+        height: 410px;
+    }
+}
+
+/*  给插入的img设置宽度为100%当图片小于设定的最小宽度时也能撑满屏幕*/
+#main_ad > .carousel-inner > .item > img {
+    width: 100%;
+}
+
+/**
+ * 网站特色----------------------------------------------------------------------
+ */
+#features {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#features i {
+    font-size: 30px;
+}
+#features a {
+    text-decoration: none;
+    color: #333;
+}
+#features a:hover {
+    /*text-decoration: none;*/
+    color: #E9232C;
+}
+#features .media {
+    padding: 10px 0;
+}
+
+/**
+ * 立即预约
+ */
+#booking {
+    border-bottom: 1px solid #E0E0E0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#booking p {
+    font-size: 16px;
+    line-height: 20px;
+}
+#booking span {
+    color: #e9232c;
+}
+#booking i {
+    font-size: 20px;
+}
+#booking p.pull-left a {
+    text-decoration: none;
+    color: #E92322;
+    border-bottom: 1px dashed #E92322;
+}
+#booking p.pull-right a {
+    text-decoration: none;
+    color: #333;
+}
+
+/**
+ * 产品介绍
+ */
+#products {
+    padding: 40px 0;
+    background-color: #f0f0f0;
+}
+#products > .container  .nav-tabs {
+    border-bottom: 1px solid #c0c0c0;
+    padding-left: 20px;
+}
+#products > .container  .nav-tabs > li a {
+    font-size: 16px;
+    color: #444;
+    background-color: transparent;
+    border: 0;
+}
+#products > .container  .nav-tabs > li.active a {
+    border-bottom: 4px solid #e9232c;
+}
+#products > .container  .tab-content > .tab-pane {
+    padding-top: 20px;
+}
+#products .panel-heading strong {
+    font-size: 36px;
+    color: #e9232c;
+}
+#products .panel-wjs.active .panel-heading {
+    color: #fff;
+}
+#products .panel-wjs.active .panel-heading strong {
+    color: #fff;
+}
+#products .panel-wjs.active .panel-body {
+    color: #fff;
+}
+#products .panel-wjs .panel-body h5{
+    font-size: 16px;
+    margin-top: 0;
+}
+#products .panel-wjs .panel-body dt{
+    color: #c0c0c0;
+}
+
+/**
+ * 新闻专区
+ */
+#news {padding: 50px 0 30px 0;border-bottom: 1px solid #c0c0c0;}
+#news .news-title {
+    border-bottom: 1px dashed #c0c0c0;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+#news .news-title::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+}
+#news .nav-pills li.active a{background: #e92322;}
+#news .nav-pills li:hover a{
+    background-color: #E92322;
+}
+#news .nav-pills li a{
+    background-color: #c0c0c0;
+}
+#news .nav-pills li a{
+width: 60px;
+height: 60px;
+border-radius: 30px;
+margin: 0 20px 20px 0;
+}
+#news .tab-content ul {
+    padding: 0;
+}
+
+#news .tab-content li {
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+@media (max-width:992px) {
+    #news .nav-pills li {
+        float: left;
+    }
+}
+
+
+/**
+ * 合作伙伴
+ */
+#friends {border-bottom: 1px solid #c0c0c0;padding-bottom: 20px;}
+#friends ul {
+    padding: 0;
+    /* 这里每个换行也看作一个字；所以需要设置字体为0号*/
+    font-size: 0px;
+}
+#friends li {
+    list-style: none;
+    display: inline-block;
+    /* css3属性 自动分成9份 */
+    width: calc(100% / 9);
+    font-size: 50px;
+    line-height: 1;
+}
+#friends li a {
+text-decoration: none;
+}
+#friends li+li {
+    border-left: 1px dashed #c0c0c0;
+}
+#friends li:hover {
+border-bottom: 0;
+}
+
+
+
+
+
+
+
+
